@@ -11,15 +11,15 @@ namespace Database
             EmployeeRepo repo = new EmployeeRepo();
             EmployeeModel employee = new EmployeeModel();
             employee.EmployeeID = 10;
-            employee.EmployeeName = "Sumit";
+            employee.EmployeeName = "Samul";
             employee.StartDate = DateTime.Now;
-            employee.Gender = 'M';
+            employee.Gender = 'F';
             employee.PhoneNumber = "9012872727";
             employee.Department = "Tech";
             employee.City = "Kolkata";
-            employee.BasicPay = 10000;
-            employee.EmployeeID = 101;
-            employee.Address = "8/1";
+            employee.BasicPay = 8000;
+            employee.EmployeeID = 121;
+            employee.Address = "India";
             employee.Deductions = 500;
             employee.TaxablePay = 200;
             employee.Tax = 899;
@@ -27,6 +27,17 @@ namespace Database
             employee.Country = 70002;
 
             repo.GetAllEmployee();
+            //bool res = repo.AddEmployee(employee);
+            //if (res)
+            //{
+            //    Console.WriteLine("Employee Added Successfully");
+            //    repo.GetAllEmployee();
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Employee isn't Added");
+            //}
+            //repo.UpdateTables();
         }
     }
 }
