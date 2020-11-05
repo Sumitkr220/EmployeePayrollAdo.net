@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Database
 {
-    class EmployeeModel
+    public class EmployeeModel
     {
         public int EmployeeID { get; set; }
         public string EmployeeName { get; set; }

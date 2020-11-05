@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Database
 {
-    class EmployeeRepo
+    public class EmployeeRepo
     {
         public static string connectionString = "Data Source= LAPTOP-HGH2MEKE\\CAPGEMINI ;Initial Catalog=payroll_service;" + "Integrated Security=True";
         SqlConnection connection = new SqlConnection(connectionString);
@@ -117,7 +117,6 @@ namespace Database
                 {
                     throw new Exception(ex.Message);
                 }
-
             }
         }
     }
