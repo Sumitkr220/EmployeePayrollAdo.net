@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Database
 {
@@ -26,7 +27,7 @@ namespace Database
             employee.NetPay = 200000;
             employee.Country = 70002;
 
-            repo.GetAllEmployee();
+            //repo.GetAllEmployee();
             //bool res = repo.AddEmployee(employee);
             //if (res)
             //{
@@ -38,6 +39,12 @@ namespace Database
             //    Console.WriteLine("Employee isn't Added");
             //}
             //repo.UpdateTables();
+            List<string> models = new List<string>();
+            models = repo.GetEmployeesJoiningAfterADate();
+            foreach (var element in models)
+            {
+                Console.WriteLine(element);
+            }
         }
     }
 }
