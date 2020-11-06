@@ -46,6 +46,10 @@ namespace Database
             //    Console.WriteLine(element);
             //}
             repo.SumOfSalaryGenderWise();
+            repo.AverageOfSalaryGenderWise();
+            repo.MinimumSalaryGenderWise();
+            repo.MaximumSalaryGenderWise();
+            repo.CountOfEmployeesGenderWise();
         }
     }
 }
