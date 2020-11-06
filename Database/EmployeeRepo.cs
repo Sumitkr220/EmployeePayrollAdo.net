@@ -168,5 +168,35 @@ namespace Database
                 this.connection.Close();
             }
         }
+        public void SumOfSalaryGenderWise()
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            try
+            {
+                using (connection)
+                {
+                    string query = @"SELECT sum(salary) as CombineSalary from employee_payroll where gender='M' group by gender";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    connection.Open();
+                    SqlDataReader dr = command.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            Console.Write(dr.GetDecimal(0) + "\t");
+                            Console.WriteLine("\n");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("No data found");
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+        }
     }
 }

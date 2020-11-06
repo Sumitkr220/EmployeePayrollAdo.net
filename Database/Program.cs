@@ -39,12 +39,13 @@ namespace Database
             //    Console.WriteLine("Employee isn't Added");
             //}
             //repo.UpdateTables();
-            List<string> models = new List<string>();
-            models = repo.GetEmployeesJoiningAfterADate();
-            foreach (var element in models)
-            {
-                Console.WriteLine(element);
-            }
+            //List<string> models = new List<string>();
+            //models = repo.GetEmployeesJoiningAfterADate();
+            //foreach (var element in models)
+            //{
+            //    Console.WriteLine(element);
+            //}
+            repo.SumOfSalaryGenderWise();
         }
     }
 }

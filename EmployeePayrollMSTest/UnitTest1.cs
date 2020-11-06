@@ -13,7 +13,7 @@ namespace EmployeePayrollMSTest
             bool Emp_BasicPay = repo.UpdateTables();
 
             Assert.AreEqual(Emp_BasicPay, true);
-
         }
+
     }
 }
